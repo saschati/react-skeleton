@@ -32,14 +32,12 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.El
       document.documentElement.style.setProperty('--window-width', width + 'px')
     }
 
-    if (device === null) {
-      listener()
-    }
+    listener()
 
     window.addEventListener('resize', listener)
 
     return () => window.removeEventListener('resize', listener)
-  }, [device])
+  }, [])
 
   const context = useMemo(() => {
     return {
