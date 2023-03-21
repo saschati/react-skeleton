@@ -19,7 +19,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "analize": "BOUNDLE_ANALIZE=true craco build",
+    "analyze": "BOUNDLE_ANALYZE=true craco build",
     "test": "craco test --setupFilesAfterEnv='./src/config/setupTests.ts'",
     "eslint": "eslint --ext .js,.ts,.jsx,.tsx src",
     "eslint:fix": "eslint --fix --ext .js,.ts,.jsx,.tsx src",

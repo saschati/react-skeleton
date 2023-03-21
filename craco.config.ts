@@ -14,7 +14,7 @@ const craco: CracoConfig = {
     plugins: {
       add: [
         ...(whenDev<[CircularDependencyPlugin]>(() => [new CircularDependencyPlugin()]) || []),
-        ...(when<[BundleAnalyzerPlugin]>(process.env.BOUNDLE_ANALIZE === 'true', () => [
+        ...(when<[BundleAnalyzerPlugin]>(process.env.BOUNDLE_ANALYZE === 'true', () => [
           new BundleAnalyzerPlugin({ analyzerHost: '0.0.0.0', analyzerPort: 8888 }),
         ]) || []),
       ],
