@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from 'components/UI/Text'
+import { Title } from '@/UI/Text'
 import styles from './Error.module.scss'
 
 export type ErrorProps = {

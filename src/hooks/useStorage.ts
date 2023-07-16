@@ -1,5 +1,5 @@
-import LocalStorage from 'app/storage/local'
-import SessionStorage from 'app/storage/session'
+import LocalStorage from '@/app/storage/local'
+import SessionStorage from '@/app/storage/session'
 
 export enum StorageType {
   LOCAL,

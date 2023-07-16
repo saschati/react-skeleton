@@ -1,8 +1,8 @@
-import { UserManager } from 'app/model/user/manager'
-import { AUTH_TOKEN } from 'config/constants'
-import useStorage, { StorageType } from 'hooks/useStorage'
+import { UserManager } from '@/app/model/user/manager'
+import { AUTH_TOKEN } from '@/config/constants'
+import useStorage, { StorageType } from '@/hooks/useStorage'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import { User } from 'types/model/user'
+import { User } from '@/types/model/user'
 import AuthContext from './AuthContext'
 
 const AuthProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.Element => {
@@ -32,7 +32,7 @@ const AuthProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.Elem
   }, [getUser, user, storage])
 
   useEffect(() => {
-    const listener = async (e: StorageEvent) => {
+    const listener = (e: StorageEvent) => {
       if (e.key === AUTH_TOKEN) {
         if (e.newValue !== null) {
           getUser()
@@ -43,7 +43,7 @@ const AuthProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.Elem
     }
     window.addEventListener('storage', listener)
     return () => window.removeEventListener('storage', listener)
-  }, [])
+  }, [getUser])
 
   const context = useMemo(() => {
     return {

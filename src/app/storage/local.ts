@@ -1,4 +1,4 @@
-import Storage from 'types/app/storage'
+import Storage from '@/types/app/storage'
 
 class LocalStorage implements Storage {
   set<T>(name: string, value: T): void {
@@ -21,7 +21,7 @@ class LocalStorage implements Storage {
     }
 
     try {
-      return JSON.parse(data)
+      return JSON.parse(data) as T
     } catch (e) {
       return data as T
     }

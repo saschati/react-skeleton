@@ -52,4 +52,6 @@ const Pagginate: React.FC<PagginateProps> = ({
   )
 }
 
-export default memo(Pagginate)
+const PagginateMemo = memo(Pagginate)
+
+export default PagginateMemo

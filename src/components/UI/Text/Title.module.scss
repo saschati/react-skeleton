@@ -1,5 +1,5 @@
-@use 'src/styles/core/functions' as f;
-@use 'src/styles/core/mixin' as m;
+@use '@/styles/core/functions' as f;
+@use '@/styles/core/mixin' as m;
 
 .title {
   &_position {

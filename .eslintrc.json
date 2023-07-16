@@ -1,18 +1,18 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
+    "es2020": true,
     "node": true,
     "jest": true
   },
   "parser": "@typescript-eslint/parser",
   "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react-hooks/recommended",
     "plugin:react/recommended",
-    "standard",
-    "plugin:prettier/recommended",
-    "plugin:jest-dom/recommended",
-    "plugin:testing-library/react",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:prettier/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -22,16 +22,19 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react", "prettier", "jest-dom", "testing-library"],
+  "plugins": ["@typescript-eslint", "react", "prettier", "react-refresh"],
   "settings": {
     "react": {
-      "version": "17"
+      "version": "18"
     }
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "@typescript-eslint/no-non-null-assertion": "off"
   }
 }

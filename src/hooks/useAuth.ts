@@ -1,4 +1,4 @@
-import { AuthContext, AuthContextValue } from 'components/Domain/Container/Auth'
+import { AuthContext, AuthContextValue } from '@/Domain/Container/Auth'
 import { useContext } from 'react'
 
 const useAuth = (): AuthContextValue => {

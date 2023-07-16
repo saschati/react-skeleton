@@ -1,4 +1,4 @@
-import { Error } from 'components/Common/Router'
+import { Error } from '@/components/Common/Router'
 import React from 'react'
 
 const NoFoundController: React.FC = (): JSX.Element => {

@@ -1,5 +1,5 @@
-@use 'src/styles/core/functions' as f;
-@use 'src/styles/core/mixin' as m;
+@use '@/styles/core/functions' as f;
+@use '@/styles/core/mixin' as m;
 
 .pagginate {
   @include m.flex($gap: 8px);
@@ -12,7 +12,6 @@
 
   &__link {
     @include m.text(f.size(), $w: 500, $c: f.color(vivid-orange));
-
     @include m.flex(center);
 
     padding-inline: 5px;

@@ -28,8 +28,8 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.El
 
       setDevice(device)
 
-      document.documentElement.style.setProperty('--window-height', height + 'px')
-      document.documentElement.style.setProperty('--window-width', width + 'px')
+      document.documentElement.style.setProperty('--window-height', `${height}px`)
+      document.documentElement.style.setProperty('--window-width', `${width}px`)
     }
 
     listener()

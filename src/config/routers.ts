@@ -1,8 +1,8 @@
 import React from 'react'
 import Path from './path'
-import NoFoundController from 'controllers/Error/NoFoundController'
+import NoFoundController from '@/controllers/Error/NoFoundController'
 
-const HomeController = React.lazy(() => import('controllers/Home/HomeController'))
+const HomeController = React.lazy(() => import('@/controllers/Home/HomeController'))
 
 export enum RouterAccess {
   ALL,
