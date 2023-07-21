@@ -91,3 +91,11 @@
 
   @return true;
 }
+
+@function is-var($var) {
+  @if str.index(to-string($var), '--') == 1 {
+    @return true;
+  }
+
+  @return false;
+}

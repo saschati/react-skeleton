@@ -3,7 +3,7 @@
 @use 'core/functions.scss' as f;
 
 body {
-  font-family: c.fonts(syne);
+  font-family: c.fonts(base);
   font-size: f.size();
   line-height: f.lh();
 }

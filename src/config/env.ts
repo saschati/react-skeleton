@@ -4,8 +4,8 @@ export interface Enviroment {
 }
 
 const env: Enviroment = {
-  baseUrl: process.env.REACT_APP_APP_URL as string,
-  apiUrl: process.env.REACT_APP_API_URL as string,
+  baseUrl: import.meta.env.VITE_APP_URL as string,
+  apiUrl: import.meta.env.VITE_API_URL as string,
 }
 
 export default env

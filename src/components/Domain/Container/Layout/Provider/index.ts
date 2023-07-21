@@ -1,2 +1,2 @@
 export { default } from './LayoutProvider'
-export { LayoutContext, type LayoutContextValue, Device } from './LayoutContext'
+export { LayoutContext, type LayoutContextValue, type Device } from './LayoutContext'

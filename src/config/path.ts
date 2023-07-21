@@ -1,4 +1,4 @@
-enum Path {
+const enum Path {
   HOME = '/',
 }
 

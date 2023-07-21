@@ -1,4 +1,6 @@
 @use 'config' as c;
+@use 'functions' as f;
+@use 'helpers' as h;
 
 @mixin text(
   $size: false,
@@ -36,6 +38,35 @@
   @if $tt {
     text-transform: $tt;
   }
+}
+
+// Prepared text
+@mixin ptext(
+  $size: false,
+  /* color */ $c: false,
+  /* line-height */ $lh: false,
+  /* font-weight */ $w: false,
+  /* text-align */ $ta: false,
+  /* letter-spacing */ $ls: false,
+  /* text-transform */ $tt: false
+) {
+  @if $size {
+    $size: f.size($size);
+  }
+
+  @if $c {
+    @if h.is-var($c) {
+      $c: f.v($c);
+    } @else {
+      $c: f.color($c);
+    }
+  }
+
+  @if $lh {
+    $lh: f.lh($lh);
+  }
+
+  @include text($size, $c, $lh, $w, $ta, $ls, $tt);
 }
 
 @mixin background($color: false, $img: false, $position: center, $size: cover, $repeat: false) {
