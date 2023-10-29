@@ -1,10 +1,10 @@
 import { createContext } from 'react'
 
 export enum Device {
-  DESCTOP,
-  LAPTOP,
-  TABLET,
-  MOBILE,
+  DESKTOP = 'desktop',
+  LAPTOP = 'laptop',
+  TABLET = 'tablet',
+  MOBILE = 'mobile',
 }
 
 export interface LayoutContextValue {

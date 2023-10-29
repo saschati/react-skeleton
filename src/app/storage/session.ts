@@ -1,4 +1,4 @@
-import Storage from '@/types/app/storage'
+import Storage from './storage'
 
 class SessionStorage implements Storage {
   set<T>(name: string, value: T): void {

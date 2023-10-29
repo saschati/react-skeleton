@@ -1,8 +1,8 @@
 import { UserManager } from '@/app/model/user/manager'
-import { AUTH_TOKEN } from '@/config/constants/auth'
+import { AUTH_TOKEN } from '@/app/config/constants/auth'
 import useStorage from '@/hooks/useStorage'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import { User } from '@/types/model/user'
+import { User } from '@/app/model/user/types'
 import AuthContext from './AuthContext'
 
 export type AuthProviderProps = React.PropsWithChildren

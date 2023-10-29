@@ -1,5 +1,6 @@
 import * as Yup from 'yup'
 import mime from 'mime'
+import { PhoneNumberUtil } from 'google-libphonenumber'
 
 Yup.addMethod(Yup.mixed, 'file', function (errorMessage = 'Is not file.') {
   return this.test('file', errorMessage as string, function (value) {
@@ -36,6 +37,22 @@ Yup.addMethod(Yup.mixed, 'fileSize', function (size: number, errorMessage = 'Fil
     }
 
     return (value as File).size <= size * 1024
+  })
+})
+
+Yup.addMethod(Yup.string, 'phone', function (errorMessage = 'Phone is invalid.') {
+  return this.test('phone', errorMessage as string, (value) => {
+    if (!value) {
+      return true
+    }
+
+    const instance = PhoneNumberUtil.getInstance()
+
+    try {
+      return instance.isValidNumber(instance.parseAndKeepRawInput(value))
+    } catch (e) {
+      return false
+    }
   })
 })
 

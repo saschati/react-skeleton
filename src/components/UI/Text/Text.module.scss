@@ -1,0 +1,74 @@
+@use '@/styles/core/functions' as f;
+@use '@/styles/core/mixin' as m;
+
+.text {
+  @include m.text($w: 500, $fs: normal);
+
+  &_position {
+    &_start {
+      @include m.text($ta: start);
+    }
+
+    &_center {
+      @include m.text($ta: center);
+    }
+  }
+
+  &_size {
+    &_default,
+    &_m {
+      // Medium
+      @include m.text(f.size(18px), $lh: f.lh(22px));
+    }
+
+    &_xxxl {
+      // 3XL
+      // size
+    }
+
+    &_xxl {
+      // 2XL
+      // size
+    }
+
+    &_xl {
+      // Extra Large
+      // size
+    }
+
+    &_l {
+      // Large
+      // size
+    }
+
+    &_s {
+      // Small
+      // size
+    }
+
+    &_xs {
+      // Extra Small
+      // size
+    }
+
+    &_xxs {
+      // 2XS
+      // size
+    }
+
+    &_4s {
+      // Four S
+      // size
+    }
+
+    &_5s {
+      // Five S
+      // size
+    }
+
+    &_6s {
+      // Six S
+      // size
+    }
+  }
+}

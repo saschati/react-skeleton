@@ -21,6 +21,7 @@
       "@/Domain/*": ["./src/components/Domain/*"],
       "@/UI/*": ["./src/components/UI/*"],
       "@/Common/*": ["./src/components/Common/*"],
+      "@/assets": ["./src/assets/*"],
       "@/*": ["./src/*"]
     }
   },

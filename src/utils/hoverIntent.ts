@@ -62,7 +62,7 @@ export default class HoverIntent {
       this.isOverElement = false
 
       this.elem.removeEventListener('mousemove', this.onMouseMove)
-      clearInterval(this.checkSpeedInterval as NodeJS.Timer)
+      clearInterval(this.checkSpeedInterval as NodeJS.Timeout)
 
       if (this.isHover) {
         // Якщо була зупинка руху на елементі
@@ -91,7 +91,7 @@ export default class HoverIntent {
     }
 
     if (speed < this.sensitivity) {
-      clearInterval(this.checkSpeedInterval as NodeJS.Timer)
+      clearInterval(this.checkSpeedInterval as NodeJS.Timeout)
 
       this.isHover = true
       this.enter.call(this.elem)

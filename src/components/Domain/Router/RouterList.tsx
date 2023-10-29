@@ -1,8 +1,8 @@
 import React, { Suspense, useMemo } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import routes from '@/config/routes'
+import routes from '@/app/config/routes'
 import useAuth from '@/hooks/useAuth'
-import { NoFoundComponent, RouterAccess } from '@/config/router'
+import { NoFoundComponent, RouterAccess } from '@/app/config/router'
 
 const RouterList: React.FC = (): JSX.Element => {
   const { user } = useAuth()

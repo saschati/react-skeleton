@@ -1,4 +1,4 @@
-import env from '@/config/env'
+import env from '@/app/config/env'
 import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react'
 
 // Create our baseQuery instance

@@ -1,1 +1,1 @@
-export { default as Title, type TitleProps } from './Title'
+export { default, type TextProps } from './Text'

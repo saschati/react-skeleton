@@ -9,7 +9,8 @@
   /* font-weight */ $w: false,
   /* text-align */ $ta: false,
   /* letter-spacing */ $ls: false,
-  /* text-transform */ $tt: false
+  /* text-transform */ $tt: false,
+  /* font-style */ $fs: false
 ) {
   @if $size {
     font-size: $size;
@@ -37,6 +38,10 @@
 
   @if $tt {
     text-transform: $tt;
+  }
+
+  @if $tt {
+    font-style: $fs;
   }
 }
 
@@ -132,9 +137,7 @@
   @if $flow == center {
     justify-content: center;
     align-items: center;
-  }
-
-  @if $flow == wrap {
+  } @else if $flow == wrap {
     flex-wrap: wrap;
   } @else if $flow {
     flex-flow: $flow;

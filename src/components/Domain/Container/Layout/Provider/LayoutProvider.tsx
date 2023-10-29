@@ -18,7 +18,7 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.El
       const height = window.innerHeight
 
       if (width >= DISPLAY.LAPTOP) {
-        device = Device.DESCTOP
+        device = Device.DESKTOP
       } else if (width >= DISPLAY.TABLET) {
         device = Device.LAPTOP
       } else if (width >= DISPLAY.MOBILE) {
@@ -43,7 +43,7 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = ({ children }): JSX.El
 
   const context = useMemo(() => {
     return {
-      device: device || Device.DESCTOP,
+      device: device || Device.DESKTOP,
       size,
     }
   }, [device, size])

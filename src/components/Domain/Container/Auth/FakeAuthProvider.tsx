@@ -1,6 +1,6 @@
 import { UserManager } from '@/app/model/user/manager'
 import React, { useMemo, useState } from 'react'
-import { User } from '@/types/model/user'
+import { User } from '@/app/model/user/types'
 import AuthContext from './AuthContext'
 
 export type FakeAuthProviderProps = React.PropsWithChildren & {

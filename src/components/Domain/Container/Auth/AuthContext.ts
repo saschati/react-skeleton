@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 import { UserManager } from '@/app/model/user/manager'
-import { User } from '@/types/model/user'
+import { User } from '@/app/model/user/types'
 
 export interface AuthContextValue {
   user: UserManager<User>
