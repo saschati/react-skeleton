@@ -30,6 +30,8 @@
     "eslint:fix": "eslint --fix src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "stylelint": "stylelint \"src/**/*.scss\" --custom-syntax postcss-scss",
     "prettier": "prettier --write \"**/*.+(js|ts|jsx|tsx|json|css|scss|md)\"",
+    "storybook": "storybook dev -h 0.0.0.0 -p 80",
+    "build-storybook": "storybook build",
     "postinstall": "patch-package"
   },
   "eslintConfig": {
@@ -51,6 +53,14 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-interactions": "^7.5.1",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/react": "^7.5.1",
+    "@storybook/react-vite": "^7.5.1",
+    "@storybook/testing-library": "^0.2.2",
     "@types/google-libphonenumber": "^7.4.29",
     "@types/js-cookie": "^3.0.3",
     "@types/lodash": "^4.14.191",
@@ -72,9 +82,11 @@
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "eslint-plugin-storybook": "^0.6.15",
     "patch-package": "^8.0.0",
     "postcss-scss": "^4.0.6",
     "prettier": "^3.0.0",
+    "storybook": "^7.5.1",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^11.0.0",
@@ -82,5 +94,8 @@
     "stylelint-selector-bem-pattern": "^3.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.0"
+  },
+  "resolutions": {
+    "jackspeak": "2.3.6"
   }
 }

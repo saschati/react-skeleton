@@ -1,0 +1,5 @@
+.docblock-argstable {
+  *:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: revert;
+  }
+}

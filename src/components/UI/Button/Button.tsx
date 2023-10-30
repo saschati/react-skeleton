@@ -13,15 +13,27 @@ type ButtonType =
     }
   | {
       type?: Exclude<JSX.IntrinsicElements['button']['type'], 'submit'>
+      /**
+       * Button handler if it is not defined as **submit** type
+       */
       onClick: React.MouseEventHandler<HTMLButtonElement>
     }
 
 export type ButtonProps = Omit<JSX.IntrinsicElements['button'], 'onClick' | 'type'> &
   ButtonType & {
-    text: string
+    /**
+     * Button color with pre-defined colors
+     */
     color?: ButtonColor
+    /**
+     * Text in the middle of the button
+     */
+    text: string
   }
 
+/**
+ * Primary UI component for user interaction
+ */
 const Button: React.FC<ButtonProps> = ({
   text,
   color = 'black',
