@@ -58,15 +58,15 @@
 
   &_size {
     &_small {
-      --_preloader-weight: 50px;
+      --_preloader-size: 50px;
     }
 
     &_normal {
-      --_preloader-weight: 100px;
+      --_preloader-size: 100px;
     }
 
     &_big {
-      --_preloader-weight: 200px;
+      --_preloader-size: 200px;
     }
   }
 

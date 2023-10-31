@@ -19,19 +19,31 @@ type TextSize =
   | '6s'
 type TextPosition = 'start' | 'center'
 
-export type TextProps = React.PropsWithChildren & {
+export type TextProps = Required<React.PropsWithChildren> & {
   className?: string
+  /**
+   * Available text sizes on the site
+   */
   size?: TextSize
+  /**
+   * Available text positions on the site
+   */
   position?: TextPosition
+  /**
+   * Defining the tag for the top element
+   */
   as?: keyof JSX.IntrinsicElements | React.FC
 }
 
+/**
+ * Primary UI component for working with texts
+ */
 const Text: React.FC<TextProps> = ({
   children,
   className,
   size = 'default',
-  position = 'default',
-  as = 'h1',
+  position = 'start',
+  as = 'p',
 }): JSX.Element => {
   const CustomTag = as
 

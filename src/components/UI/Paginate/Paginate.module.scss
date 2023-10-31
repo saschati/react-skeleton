@@ -1,7 +1,7 @@
 @use '@/styles/core/functions' as f;
 @use '@/styles/core/mixin' as m;
 
-.pagginate {
+.paginate {
   @include m.flex($gap: 8px);
 
   list-style-type: none;
@@ -11,7 +11,7 @@
   }
 
   &__link {
-    @include m.text(f.size(), $w: 500, $c: f.color(vivid-orange));
+    @include m.text(f.size(), $w: 500, $c: f.color(black));
     @include m.flex(center);
 
     padding-inline: 5px;
@@ -20,7 +20,7 @@
     min-height: 30px;
 
     border-radius: 2px;
-    border: 2px solid f.color(light-blue);
+    border: 2px solid f.color(black);
 
     cursor: pointer;
   }
@@ -38,12 +38,12 @@
   }
 
   &__item_type_active {
-    background-color: f.color(light-blue);
+    background-color: f.color(white);
     border-color: transparent;
   }
 
   &__item_type_active &__link {
-    color: f.color(white);
+    color: f.color(black);
   }
 
   &__item_type_disabled,

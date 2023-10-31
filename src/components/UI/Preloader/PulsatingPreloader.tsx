@@ -9,11 +9,23 @@ type PulsatingPreloaderSize = 'small' | 'normal' | 'big'
 type PulsatingPreloaderWeight = 'thin' | 'bold'
 
 export type PulsatingPreloaderProps = {
+  /**
+   * The color of the pulse wave
+   */
   color?: PulsatingPreloaderColor
+  /**
+   * Preloader size
+   */
   size?: PulsatingPreloaderSize
+  /**
+   * Pulse wave thickness
+   */
   weight?: PulsatingPreloaderWeight
 }
 
+/**
+ * Primary UI of the preloader for use during downloads or uploading data
+ */
 const PulsatingPreloader: React.FC<PulsatingPreloaderProps> = ({
   color = 'black',
   size = 'small',
