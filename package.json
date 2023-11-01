@@ -17,6 +17,7 @@
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.7.0",
     "sass": "^1.57.1",
+    "the-new-css-reset": "^1.11.1",
     "vite-plugin-svgr": "^4.1.0",
     "web-vitals": "^3.3.0",
     "yup": "^1.0.2"
@@ -96,7 +97,7 @@
     "vite": "^4.4.0"
   },
   "resolutions": {
-    "jackspeak": "2.3.6",
-    "globby": "^11.0.1"
+    "storybook/**/jackspeak": "2.3.6",
+    "**/globby": "^11.0.1"
   }
 }
