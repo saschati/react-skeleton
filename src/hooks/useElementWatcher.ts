@@ -30,8 +30,7 @@ const useElementWatcher = <T extends HTMLElement = HTMLElement>(
       observer.unobserve(element as Element)
       observer.disconnect()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [ref])
 }
 
 export default useElementWatcher

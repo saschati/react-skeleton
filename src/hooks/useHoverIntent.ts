@@ -28,8 +28,7 @@ const useHoverIntent = <T extends HTMLElement = HTMLElement>(
     return () => {
       hoverIntent.destroy()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sensitivity, interval])
+  }, [sensitivity, interval, ref])
 }
 
 export default useHoverIntent
